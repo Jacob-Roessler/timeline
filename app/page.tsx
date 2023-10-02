@@ -1,20 +1,14 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Timeline from './components/Timeline';
 import Updated from './components/Updated';
 
 export default function Home({ name }: { name: string }) {
   const [animeList, setAnimeList] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [username, setUsername] = useState(name ? name : '');
+  const [username, setUsername] = useState(name || '');
   const [error, setError] = useState(false);
   const [mode, setMode] = useState('other');
-
-  useEffect(() => {
-    if (username) {
-      setList();
-    }
-  }, []);
 
   const setList = async () => {
     setAnimeList([]);
