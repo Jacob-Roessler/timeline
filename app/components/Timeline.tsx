@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { anime } from '../types/anime';
 
 export default function Timeline({ animeList }: { animeList: anime[] }) {
   const [filterType, setFilterType] = useState('all');
