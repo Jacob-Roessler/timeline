@@ -3,10 +3,10 @@ import { useState } from 'react';
 import Timeline from './components/Timeline';
 import Updated from './components/Updated';
 
-export default function Home({ name }: { name: string }) {
+export default function Home() {
   const [animeList, setAnimeList] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [username, setUsername] = useState(name || '');
+  const [username, setUsername] = useState('');
   const [error, setError] = useState(false);
   const [mode, setMode] = useState('other');
 
